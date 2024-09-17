@@ -2,27 +2,26 @@ package level1;
 
 import java.util.Scanner;
 
-public class factorial {
-	public static long fact(int n) {
-		long f = 1;
-		if(n == 0)
-			return f;
-		for(int i=2;i<=n;i++) {
-			f *= i;
+public class Factorial {
+	public static long fact(int number) {
+		long factorialValue = 1;
+		for(int i = 2;i <= number;i ++) {
+			factorialValue *= i;
 		}
-		return f;
+		return factorialValue;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n;
+		int number;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number: ");
-		n = sc.nextInt();
-		if(n>=0)
-			System.out.printf("Factorial of %d is %d", n, fact(n));
+		number = sc.nextInt();
+		if(number >= 0)
+			System.out.printf("Factorial of %d is %d", number, fact(number));
 		else
-			System.out.println("Please enter number greater than 0");
+			System.out.println("Please enter number greater than or equal to 0");
+		sc.close();
 	}
 
 }
